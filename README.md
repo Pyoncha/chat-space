@@ -5,7 +5,7 @@
 ### messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|text|text||
 |image|text||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
@@ -23,6 +23,7 @@
 
 #### Association
 - has_many :messages
+- has_many :groups_users
 - has_many :groups, through: :groups_users
 
 ### groupsテーブル
@@ -32,6 +33,7 @@
 
 #### Association
 - has_many :messages
+- has_many :groups_users
 - has_many :users, through: :groups_users
 
 ### groups_usersテーブル
