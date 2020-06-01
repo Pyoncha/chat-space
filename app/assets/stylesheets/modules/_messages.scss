@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.side-bar {
+  width: 300px;
+  &__user-name {
+    height: 100px;
+    background-color: #253141;
+    display: flex;
+    align-items: center;
+    &__top-items {
+      height: 20px;
+      width: 260px;
+      margin: 0 20px;
+      line-height: 20px;
+      display: flex;
+      justify-content: space-between;
+      &__name {
+        font-size: 16px;
+        font-weight: bold;
+        color: #ffffff;
+      }
+      &__icons {
+        width: 60px;
+        text-align: right;
+        &__edit-group {
+          text-decoration: none;
+          color: #ffffff;
+          margin-right: 5px;
+        }
+        &__edit-user {
+          text-decoration: none;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  &__group-lists {
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    &__group {
+      padding: 0 20px;
+      font-weight: bold;
+      color: #ffffff;
+      &__name {
+        padding-top: 20px;
+        font-size: 15px;
+      }
+      &__message {
+        padding: 5px 0 40px;
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+
+
+.chat-main {
+  width: calc(100vw - 300px);
+  &__group-info {
+    height: 100px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    &__group {
+      padding-left: 40px;
+      &__name {
+        padding-top: 35px;
+        font-size: 20px;
+        color: #333333;
+      }
+      &__member {
+        padding-top: 15px;
+        font-size: 12px;
+        color: #999999;
+      }
+    }
+    &__edit-btn {
+      padding: 28px 40px 0 0;
+      &__btn{
+        display: block;
+        height: 40px;
+        width: 72px;
+        line-height: 40px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: #38aef0;
+        border: solid 1px;
+      }
+      
+    }
+  }
+  &__message-list {
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+  }
+  &__message-form {
+    height: 90px;
+    background-color: #d2d2d2;
+  }
+}
