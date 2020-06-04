@@ -27,3 +27,13 @@
       どうも！
 
   .chat-main__message-form
+    .chat-main__message-form__input-box
+      .chat-main__message-form__input-box__text
+        type a message
+      %label{class: "chat-main__message-form__input-box__image"}
+        = icon('far', 'image', class: "chat-main__message-form__input-box__image__icon")
+        %input{type: "file", class: "chat-main__message-form__input-box__image__file"}
+    .chat-main__message-form__send-btn
+      = link_to "#", class: "chat-main__message-form__send-btn__btn" do
+        %span<>
+        Send
