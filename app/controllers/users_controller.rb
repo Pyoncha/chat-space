@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def update
     if current_user.update(user_params)
       redirect_to root_path
-    #アップデートできない場合、テキスト内容そのまま残し編集
+    #アップデートできない場合は編集画面へ
     else
       render :edit
     end

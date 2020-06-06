@@ -45,17 +45,21 @@
   &__group-lists {
     height: calc(100vh - 100px);
     background-color: #2f3e51;
+    padding: 20px 20px 0;
+    overflow: scroll;
     &__group {
-      padding: 0 20px;
-      font-weight: bold;
-      color: $mainWhiteColor;
-      &__name {
-        padding-top: 20px;
-        font-size: 15px;
-      }
-      &__message {
-        padding: 5px 0 40px;
-        font-size: 11px;
+      margin-bottom: 40px;
+      &__link {
+        text-decoration: none;
+        font-weight: bold;
+        color: $mainWhiteColor;
+        &__name {
+          margin-bottom: 5px;
+          font-size: 15px;
+        }
+        &__message {
+          font-size: 11px;
+        }
       }
     }
   }
