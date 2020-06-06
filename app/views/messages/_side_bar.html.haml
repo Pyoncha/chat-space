@@ -4,25 +4,17 @@
       .side-bar__user-name__top-items__name
         = current_user.name
       .side-bar__user-name__top-items__icons
-        = link_to "#", class: "side-bar__user-name__top-items__icons__edit-group" do
+        = link_to new_group_path, class: "side-bar__user-name__top-items__icons__edit-group" do
           = icon('far','edit')
           %span<>
         = link_to edit_user_path(current_user), class: "side-bar__user-name__top-items__icons__edit-user" do
           = icon('fas','cog')
           %span<>
   .side-bar__group-lists
-    .side-bar__group-lists__group
-      .side-bar__group-lists__group__name
-        techcamp
-      .side-bar__group-lists__group__message
-        まだメッセージがありません
-    .side-bar__group-lists__group
-      .side-bar__group-lists__group__name
-        77期夜間
-      .side-bar__group-lists__group__message
-        まだメッセージがありません
-    .side-bar__group-lists__group
-      .side-bar__group-lists__group__name
-        dチーム
-      .side-bar__group-lists__group__message
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .side-bar__group-lists__group
+        = link_to '#', class: "side-bar__group-lists__group__link" do      
+          .side-bar__group-lists__group__link__name
+            = group.name
+          .side-bar__group-lists__group__link__message
+            メッセージはまだありません。
